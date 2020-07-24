@@ -1,0 +1,53 @@
+body {
+    @include font-family(base);
+}
+
+%font-heading {
+    @include font-family(heading);
+    @include font-weight(bold);
+    @include var(color, clr-primary);
+}
+
+%font-body {
+    @include font-family(base);
+    @include font-weight(regular);
+}
+
+.title-1 {
+    font-size: rem(48px);
+    line-height: rem(64px);
+    @extend %font-heading;
+
+    @include mq(medium) {
+        @include font-sizes(title-1);
+    }
+}
+
+.title-2 {
+    @include font-sizes(title-3);
+    @extend %font-heading;
+
+    @include mq(medium) {
+        @include font-sizes(title-2);
+    }
+}
+
+.title-3 {
+    @include font-sizes(title-3);
+    @extend %font-heading;
+}
+
+.title-4 {
+    @include font-sizes(title-4);
+    @extend %font-heading;
+}
+
+.body-text {
+    @include font-sizes(body-text);
+    @extend %font-body;
+}
+
+.body-small {
+    @include font-sizes(body-small);
+    @extend %font-body;
+}

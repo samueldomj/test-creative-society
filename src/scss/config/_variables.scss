@@ -1,0 +1,45 @@
+// Paleta de colores
+$colors: (
+    clr-primary: #0e0e1e,
+    clr-accent:  #521687,
+    clr-white:   #ffffff,
+    clr-gray:    #7e92a2 
+);
+
+// Tamaños de letra e interlineado 
+$font__sizes: (
+    title-1:    rem(68px) rem(84px),
+    title-2:    rem(31px) rem(45px),
+    title-3:    rem(25px) rem(35px),
+    title-4:    rem(16px) rem(24px),
+    body-text:  rem(16px) rem(24px),
+    body-small: rem(13px) rem(21px)
+);
+
+$font__family: (
+    base: '"Roboto", sans-serif', // font-family (base)
+    heading: "'Roboto Condensed', sans-serif" // font-family (heading)
+);
+
+$font__weight: (
+    regular: 400,
+    bold: 700
+);
+
+
+// Puntos de ruptura (Responsive Web Design)
+$breakpoints: (
+    small:  rem(375px),
+    medium: rem(648px),
+    large:  rem(1024px),
+    xlarge: rem(1200px)
+);
+
+// Control del z-index
+$z-index: (
+    z-back:  -10,
+    z-normal: 1,
+    z-tooltip: 10,
+    z-fixed:  100,
+    z-modal:  1000
+);

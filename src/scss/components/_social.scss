@@ -1,0 +1,21 @@
+.social {
+    display: grid;
+    grid-template-columns: repeat(3, rem(56px));
+    column-gap: rem(24px);
+    justify-content: center;
+    
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include box-size(rem(56px));
+        border-radius: 50px;
+        text-align: center;
+        background: #8059C4;
+        transition: transform .3s ease;
+
+        &:hover {
+            transform: translateY(-8px);
+        }
+    }
+}

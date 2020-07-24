@@ -1,0 +1,14 @@
+.hotels {
+    margin-bottom: rem(56px);
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        row-gap: rem(24px);
+
+        @include mq(large) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: rem(32px);
+        }
+    }
+}

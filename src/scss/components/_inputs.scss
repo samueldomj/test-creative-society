@@ -1,0 +1,26 @@
+.input {
+    display: block;
+    width: 100%;
+    padding: rem(16px);
+    margin-bottom: rem(24px);
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid;
+    @include var(border-bottom-color, clr-white);
+    @include font-sizes(body-text);
+    @include font-family(base);
+    @include font-weight(regular);
+    @include var(color, clr-white);
+
+    &:placeholder-shown {
+        color: rgba(map-get($colors, clr-white), .5);
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    @include mq(large) {
+        margin-bottom: 0;
+    }
+}

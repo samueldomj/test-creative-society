@@ -1,0 +1,35 @@
+$header-hg: rem(95px);
+
+.page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @include z-index(z-fixed);
+    padding-right: rem(16px);
+    padding-left: rem(16px);
+    height: $header-hg;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    @include var(background, clr-white);
+    box-shadow: 0 2px 10px rgba(#000, .1);
+
+    @include mq(xlarge) {
+        padding-right: rem(40px);
+        padding-left: rem(40px);
+    }
+
+    &__toggle-menu {
+        display: inline-block;
+        @include var(background, clr-accent);
+        padding: rem(10px);
+        border-radius: 4px;
+        cursor: pointer;
+
+        @include mq(xlarge) {
+            display: none;
+        }
+    }
+}

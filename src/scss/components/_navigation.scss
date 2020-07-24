@@ -1,0 +1,114 @@
+.navigation {
+    position: fixed;
+    top: $header-hg;
+    left: -100%;
+    width: 100%;
+    padding: 0 rem(16px);
+    @include z-index(z-fixed);
+    @include var(background-color, clr-white);
+    transition: left .3s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+    @include mq(xlarge) {
+        position: static;
+        left: 0;
+        width: auto;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__menu {
+        border-top: 1px solid rgba(#000, .1);
+        border-bottom: 1px solid rgba(#000, .1);
+
+        @include mq(xlarge) {
+            border: none;
+        }
+    }
+
+    &__item {
+        margin-bottom: rem(16px) - rem(8px);
+        
+        @include mq(xlarge) {
+            display: inline-block;
+            margin-bottom: 0;
+            margin-left: rem(24px);
+        }
+
+        &:first-child {
+            margin-top: 16px;
+
+            @include mq(xlarge) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: rem(8px) 0;
+        text-align: center;
+        @include var(color, clr-primary);
+        @include font-sizes(title-4);
+        @include font-weight(regular);
+
+        span {
+            display: inline-block;
+            padding: 0 rem(8px);
+            transition-property: color, border;
+            transition: .2s ease-in;
+            border-bottom: 2px solid transparent;
+        }
+
+        &:hover {
+            span {
+                @include var(color, clr-gray);
+                @include var(border-bottom-color, clr-gray);
+            }
+        }
+        
+    }
+
+    &__config {
+        padding: rem(16px) 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+
+        span {
+            cursor: pointer;
+            
+            @include mq(xlarge) {
+                margin-left: 16px;
+            }
+        }
+
+        @include mq(xlarge) {
+            padding: 0;
+            margin-left: rem(40px);
+        }
+    }
+
+    &--footer {
+        .navigation__menu--footer {
+            border: none;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            
+            @include mq(large) {
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+
+        .navigation__item {
+            margin: 0;
+        }
+    }
+}
+
+/* Muestra el menu al hacer click en el boton hamburguesa */
+.navigation.show {
+    left: 0;
+}

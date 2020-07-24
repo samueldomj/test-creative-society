@@ -1,0 +1,27 @@
+// Config
+@import "config/functions";
+@import "config/variables";
+@import "config/mixins";
+
+// Base (Etiquetas simples de html)
+@import "base/normalize";
+@import "base/base";
+@import "base/helpers";
+@import "base/tipography";
+
+// Layout (Divisiones de las regiones de los elementos) 
+@import "layout/header";
+@import "layout/hero";
+@import "layout/hotels";
+@import "layout/newsletter";
+@import "layout/footer";
+
+// Components (Son los elementos de UI de tu interfaz, como botones, tablas, menus, etc.)
+@import "components/buttons";
+@import "components/card";
+@import "components/navigation";
+@import "components/search";
+@import "components/social";
+@import "components/inputs";
+
+// Theme (colores y tipografía)

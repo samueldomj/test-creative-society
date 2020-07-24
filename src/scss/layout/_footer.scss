@@ -1,0 +1,23 @@
+.page-footer {
+    padding: rem(16px);
+    background: #F7F7F7;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mq(xlarge) {
+        flex-direction: row;
+        padding-right: rem(40px);
+        padding-left: rem(40px);
+    }
+  
+    .page-footer__brand {
+        margin-top: rem(24px);
+        order: 1;
+
+        @include mq(xlarge) {
+            margin-top: 0;
+        }
+    }
+}

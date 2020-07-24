@@ -1,0 +1,52 @@
+// Mixin para media queries 
+@mixin mq($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    } @else if type-of($breakpoint) == number and unit ($breakpoint) == 'px' {
+        @media screen and (min-width: $breakpoint) {
+            @content;
+        }
+    }
+}
+
+// Variables nativas (custom properties)
+@mixin var($property, $val) {
+    #{$property}: var(--#{$val});
+}
+
+// Contenedor
+@mixin container {
+    width: 90%;
+    max-width: rem(1160px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Proporciones de modelo de caja
+@mixin box-size($wd, $hg: $wd) {
+    width: $wd;
+    height: $hg;
+}
+
+// Aplica las propiedades de font-size y interlineado
+@mixin font-sizes($val) {
+    font-size: nth(map-get($font__sizes, $val), 1);
+    line-height: nth(map-get($font__sizes, $val), 2);
+}
+
+// Aplica el tipo de fuente
+@mixin font-family($elem) {
+    font-family: unquote(get-font-family($elem));
+}
+
+// Aplica el grosor de la letra
+@mixin font-weight($elem) {
+    font-weight: get-font-weight($elem);
+}
+
+// Aplica el z-index
+@mixin z-index($val) {
+    z-index: var(--#{$val});
+}

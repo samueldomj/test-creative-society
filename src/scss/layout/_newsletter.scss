@@ -1,0 +1,32 @@
+.newsletter {
+    padding: rem(40px) 0;
+    @include var(background, clr-accent);
+    @include var(color, clr-white);
+    text-align: center;
+
+    &__register {
+        margin-top: rem(32px);
+
+        form {
+            margin-top: rem(40px);
+
+            .button {
+                width: 100%;
+            }
+        }
+
+        @include mq(large) {
+            form {
+                display: grid;
+                grid-template-columns: 1fr 1fr 200px;
+                align-items: flex-end;
+                column-gap: rem(16px);
+            }
+        }
+    }
+
+    &__title {
+        @include var(color, clr-white);
+        margin-bottom: rem(8px);
+    }
+}

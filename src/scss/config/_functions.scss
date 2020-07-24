@@ -1,0 +1,20 @@
+// Convierte la unidad px a rem
+@function rem($px, $base: 16px) {
+    @if type-of($px) == number and unit($px) == 'px' {
+        @return ($px / $base) * 1rem;
+    }
+
+    @return null;
+}
+
+// Font family
+// uso en: _mixins.scss [@mixin font-family]
+@function get-font-family($elem) {
+    @return map-get($font__family, $elem);
+}
+
+// Font family
+// uso en: _mixins.scss [@mixin font-weight]
+@function get-font-weight($elem) {
+    @return map-get($font__weight, $elem);
+}
