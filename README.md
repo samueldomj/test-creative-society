@@ -1,6 +1,6 @@
 # Test Creative Society
 
-Link del demo [https://samueldomj.github.io/test-creative-society]("https://samueldomj.github.io/test-creative-society)
+Link del demo [samueldomj.github.io/test-creative-society](https://samueldomj.github.io/test-creative-society)
 
 Es un test técnico que servira para evaluar mis conocimientos de diseño y desarrollo web 👩🏽‍💻
 
