@@ -21,9 +21,9 @@ gulp.task('styles', () => {
     return gulp.src('./src/scss/styles.scss')
         .pipe(plumber())
         .pipe(sass({
-            outputStyle: 'expanded'
+            outputStyle: 'compressed'
         }))
-        // .pipe(postcss(cssPlugins))
+        .pipe(postcss(cssPlugins))
         .pipe(gulp.dest('./public/css'))
         .pipe(server.stream())
 })

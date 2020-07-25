@@ -4,7 +4,7 @@ Link del demo [https://samueldomj.github.io/test-creative-society]("https://samu
 
 Es un test técnico que servira para evaluar mis conocimientos de diseño y desarrollo web 👩🏽‍💻
 
-## Cosas realizadas
+## Cosas realizadas 📔
 
 * Etiquetas semanticas de HTML
 * SEO básico 
@@ -18,7 +18,7 @@ Es un test técnico que servira para evaluar mis conocimientos de diseño y desa
 * Imagenes con tamaño comprimido
 
 
-### Construido con 🛠
+## Construido con 🛠
 
 Este proyecto se realizó con los lenguajes: 
 
@@ -30,3 +30,13 @@ Este proyecto se realizó con los lenguajes:
 
 También se utilizó el algoritmo [Open Graph](https://www.ogp.me/), Es un protocolo que se añade a los documentos HTML para explicar el contexto del contenido y mostrar fragmentos de cierta parte del sitio o el sitio web en general
 
+## Estructura de archivos y carpetas 📂
+
+* Carpeta ``` 📂 public/ ```
+    * Contiene todo lo necesario para despligue de producción: (Imagenes minificadas, CSS Minificado)
+* Carpeta ``` 📂 src/ ```
+    * Contiene todas las carpetas con las que se trabajo en modo desarrollo 
+* Archivo  ``` /index.html ``` en la carpeta raíz
+    * Contiene toda la estructura de bloques de código de el landing page
+* Archivos sueltos
+    * Son archivos necesarios que ayudan a desarrollar el proyecto de una manera automatizada y no se deben de borrar
