@@ -156,7 +156,6 @@ body {
 
 .hero {
   position: relative;
-  margin-top: 5.9375rem;
   height: 40.5rem;
 }
 
@@ -213,6 +212,7 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   row-gap: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 @media screen and (min-width: 64rem) {
@@ -642,4 +642,43 @@ body {
   .input {
     margin-bottom: 0;
   }
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination__item {
+  background: var(--clr-white);
+}
+
+.pagination__item:first-child .pagination__link {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-left: 1px solid;
+  border-color: var(--clr-gray);
+}
+
+.pagination__item:last-child .pagination__link {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.pagination__link {
+  display: block;
+  padding: 1.25rem;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  line-height: 0;
+  border-color: var(--clr-gray);
+  color: var(--clr-primary);
+}
+
+.pagination .active .pagination__link {
+  background: var(--clr-accent);
+  color: var(--clr-white);
 }

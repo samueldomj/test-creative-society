@@ -5,6 +5,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         row-gap: rem(24px);
+        margin-bottom: rem(40px);
 
         @include mq(large) {
             grid-template-columns: repeat(2, 1fr);
